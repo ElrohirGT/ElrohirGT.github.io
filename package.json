@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "yarn && vite",
+    "build": "yarn && vite build",
+    "preview": "yarn && vite preview"
+  },
+  "devDependencies": {
+    "unplugin-fonts": "^1.1.1",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@tabler/icons": "^3.5.0",
+    "reveal.js": "^5.1.0"
+  }
+}

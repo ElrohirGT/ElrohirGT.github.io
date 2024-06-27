@@ -1,0 +1,7 @@
+#foxContainer:hover #rightEye {
+	clip-path: polygon(45% 60%, 35% 58%, 38% 65%);
+}
+
+#foxContainer:hover #leftEye {
+	clip-path: polygon(55% 60%, 65% 58%, 62% 65%);
+}

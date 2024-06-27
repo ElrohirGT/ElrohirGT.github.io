@@ -1,0 +1,119 @@
+* {
+	font-family: "Source Code Pro", monospace
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 4rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-size: 2rem;
+}
+
+p,
+blockquote,
+li {
+	font-size: 1.2rem;
+}
+
+.titleAndTwoColumnsContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 20% 80%;
+	grid-template-areas:
+		"title title"
+		"c1 c2";
+	column-gap: 1rem;
+}
+
+.titleAndTwoColumnsContainer_title {
+	grid-area: title;
+}
+
+@keyframes CursorBlink {
+	0% {
+		transform: scaleX(1)
+	}
+
+	50% {
+		transform: scaleX(1)
+	}
+
+	51% {
+		transform: scaleX(0);
+	}
+
+	100% {
+		transform: scaleX(0);
+	}
+}
+
+@keyframes Typing {
+	from {
+		transform: scaleZ(0);
+	}
+
+	to {
+		transform: scaleZ(1);
+	}
+}
+
+@keyframes SlideIn_Up {
+	0% {
+		transform: translateY(200%);
+	}
+
+	50% {
+		transform: translateY(-5%);
+	}
+
+	75% {
+		transform: translateY(5%);
+	}
+
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@keyframes SlideIn_Left {
+	0% {
+		transform: translateX(-200%);
+	}
+
+	50% {
+		transform: translateX(5%);
+	}
+
+	75% {
+		transform: translateX(-5%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes SlideIn_Right {
+	0% {
+		transform: translateX(200%);
+	}
+
+	50% {
+		transform: translateX(-5%);
+	}
+
+	75% {
+		transform: translateX(5%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+}
