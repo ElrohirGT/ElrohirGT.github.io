@@ -1,11 +1,11 @@
-import { createElement, delay } from "src/lib.mjs";
+import { createElement, delay } from "./src/lib.mjs";
 import "./index.css";
 import "unfonts.css";
-import { renderHelpCommand } from "src/helpCommand.mjs";
-import { renderAboutMeCommand } from "src/aboutMeCommand.mjs";
-import { renderExperienceCommand } from "src/experienceCommand.mjs";
-import { renderProjectsCommand } from "src/projectsCommand.mjs";
-import wallpaper from "src/imgs/1_wallpaper.jpg";
+import { renderHelpCommand } from "./src/helpCommand.mjs";
+import { renderAboutMeCommand } from "./src/aboutMeCommand.mjs";
+import { renderExperienceCommand } from "./src/experienceCommand.mjs";
+import { renderProjectsCommand } from "./src/projectsCommand.mjs";
+import wallpaper from "./src/imgs/1_wallpaper.jpg";
 
 const DIGITS_AND_LETTERS = "abcdefghijklmnñopqrstuvwxyz"
   .split("")
@@ -82,8 +82,8 @@ async function bootingAnimation(
 
     await delay(
       loadingMs +
-        animationOptions.duration * 1000 * text.length +
-        animationOptions.delay * 1000,
+      animationOptions.duration * 1000 * text.length +
+      animationOptions.delay * 1000,
     );
 
     statusElem.style.color = shouldFail ? "red" : "lightgreen";
