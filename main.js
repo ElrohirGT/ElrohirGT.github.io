@@ -1,4 +1,4 @@
-import { createElement, delay } from "./src/lib.mjs";
+import { createElement, delay, renderBackgroundImage } from "./src/lib.mjs";
 import "./index.css";
 import "unfonts.css";
 import { renderHelpCommand } from "./src/helpCommand.mjs";
@@ -142,6 +142,7 @@ export const AVAILABLE_COMMANDS = {
   clear: {
     function: () => {
       document.body.replaceChildren();
+      renderBackgroundImage(wallpaper);
     },
     usageInfo: ["Usage: clear", "Clears the console."],
   },
@@ -173,22 +174,7 @@ export const AVAILABLE_COMMANDS = {
 
 (async () => {
   await bootingAnimation(300, 100, 25);
-  createElement("img")
-    .setProperty("src", wallpaper)
-    .style({
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      display: "inline-block",
-      width: "fit-content",
-      maxWidth: "70%",
-      maxHeight: "70%",
-      opacity: "0.1",
-      transform: "translate(-50%, -50%)",
-      objectFit: "cover",
-      zIndex: "-1",
-    })
-    .setParent(document.body);
+  renderBackgroundImage(wallpaper);
 
   /**
    * @typedef {Object} HTMLState

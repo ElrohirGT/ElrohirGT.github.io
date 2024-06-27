@@ -77,3 +77,26 @@ export const toPixelsString = (quantity) => `${quantity}px`;
  * @returns {Promise<void>}
  */
 export const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+
+/**
+ * Renders the background image that displays behind all text in the terminal
+ * @param {string} wallpaper - The image to display
+ */
+export const renderBackgroundImage = (wallpaper) => {
+  createElement("img")
+    .setProperty("src", wallpaper)
+    .style({
+      position: "fixed",
+      top: "50%",
+      left: "50%",
+      display: "inline-block",
+      width: "fit-content",
+      maxWidth: "70%",
+      maxHeight: "70%",
+      opacity: "0.1",
+      transform: "translate(-50%, -50%)",
+      objectFit: "cover",
+      zIndex: "-1",
+    })
+    .setParent(document.body);
+}
